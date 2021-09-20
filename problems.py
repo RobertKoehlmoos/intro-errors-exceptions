@@ -19,7 +19,7 @@ def calculate(n1: float, op: str, n2: float) -> float:
 
 """
 Now, create a parse_input function for the calculator. This function will take a string as input. Attempt to parse
-the string into a number, followed by the operator, followed by another number. Return these values as a tuple
+the string into a float, followed by the operator, followed by another float. Return these values as a tuple
 in that order.
 
 If three things are not found in the string, raise a FormulaError stating 'Input does not consist of three elements'
@@ -29,5 +29,5 @@ raise a FormulaError stating 'The first and third input value must be numbers'
 """
 
 
-def parse_input(calculator_input: str) -> tuple[float, str, float]:
+def parse_input(calculator_input: str):
     pass
