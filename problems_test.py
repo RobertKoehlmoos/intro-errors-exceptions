@@ -45,3 +45,10 @@ def test_parse_exceptions():
         assert False, "Incorrect exception when invalid numbers are provided"
     else:
         assert False, "No exception raised when invalid numbers are provided"
+
+
+full_test_params = (("1.0 + 2.0", 3.0), ("1.0 - 2.0", -1.0), ("3.0 * 4.0", 12.0), ("80.0 / 2.0", 40.0))
+
+@pytest.mark.parametrize("calculator_input,expected", full_test_params)
+def test_parse_input(calculator_input: str, expected: float):
+    assert calculate(*parse_input(calculator_input)) == expected, "parse_input and calculate did not work together"
