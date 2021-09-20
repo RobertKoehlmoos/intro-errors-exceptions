@@ -23,7 +23,7 @@ parse_params = (("1.0 + 2.0", (1.0, "+", 2.0)), ("1.0 - 2.0", (1.0, "-", 2.0)), 
 
 
 @pytest.mark.parametrize("calculator_input,expected", parse_params)
-def test_parse_input(calculator_input: str, expected: tuple[float, str, float]):
+def test_parse_input(calculator_input: str, expected):
     assert parse_input(calculator_input) == expected
 
 
